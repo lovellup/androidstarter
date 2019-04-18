@@ -10,6 +10,7 @@ import android.view.ViewGroup
 class HomeFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        MyApplication.appComponent.injectHomeFragment(this)
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 

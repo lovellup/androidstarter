@@ -1,10 +1,10 @@
 package com.lovell.githubrepoviewer
 
-import android.app.Application
+import androidx.multidex.MultiDexApplication
 import com.lovell.githubrepoviewer.di.AppComponent
 import com.lovell.githubrepoviewer.di.DaggerAppComponent
 
-class MyApplication : Application() {
+class MyApplication : MultiDexApplication() {
     companion object {
         lateinit var appComponent: AppComponent
     }

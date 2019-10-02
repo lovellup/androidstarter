@@ -4,6 +4,7 @@ import com.lovell.githubrepoviewer.HomeFragment
 import com.lovell.githubrepoviewer.MainActivity
 import com.lovell.githubrepoviewer.MyApplication
 import com.lovell.githubrepoviewer.repolist.UserRepoListFragment
+import com.lovell.githubrepoviewer.repolist.UserRepoListViewModel
 import dagger.Component
 import javax.inject.Singleton
 
@@ -14,4 +15,5 @@ interface AppComponent {
     fun injectMainActivity(activity: MainActivity)
     fun injectHomeFragment(homeFragment: HomeFragment)
     fun injectUserRepoListFragment(userRepoListFragment: UserRepoListFragment)
+    fun injectUserRepoListViewModel(userRepoListViewModel: UserRepoListViewModel)
 }

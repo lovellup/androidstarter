@@ -8,7 +8,7 @@ import javax.inject.Inject
 class UserRepoListViewModel : ViewModel() {
 
     @Inject
-    private lateinit var repository: Repository
+    lateinit var repository: Repository
 
     init {
         MyApplication.appComponent.injectUserRepoListViewModel(this)

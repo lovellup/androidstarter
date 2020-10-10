@@ -16,13 +16,14 @@ class NetworkModule {
     @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit =
             Retrofit.Builder()
+                .baseUrl(baseUrl)
                 .client(client)
                 .addConverterFactory(MoshiConverterFactory.create())
                 .build()
 
     @Provides
     @Singleton
-    fun provideUserService(retrofit: Retrofit) = retrofit.create(UserService::class.java)
+    fun provideUserService(retrofit: Retrofit): UserService = retrofit.create(UserService::class.java)
 
     @Provides
     @Singleton

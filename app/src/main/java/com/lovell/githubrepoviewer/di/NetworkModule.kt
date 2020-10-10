@@ -1,10 +1,10 @@
 package com.lovell.githubrepoviewer.di
 
+import com.lovell.network.UserService
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
@@ -18,8 +18,11 @@ class NetworkModule {
             Retrofit.Builder()
                 .client(client)
                 .addConverterFactory(MoshiConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build()
+
+    @Provides
+    @Singleton
+    fun provideUserService(retrofit: Retrofit) = retrofit.create(UserService::class.java)
 
     @Provides
     @Singleton

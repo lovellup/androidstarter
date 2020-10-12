@@ -1,10 +1,10 @@
 package com.lovell.network
 
-import io.reactivex.Single
 import okhttp3.ResponseBody
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface UserService {
     @GET("users/{user}/repos")
-    fun getReposForUser(user: String): Single<ResponseBody>
+    suspend fun getReposForUser(@Path("user") user: String): ResponseBody
 }

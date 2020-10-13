@@ -1,6 +1,6 @@
 package com.lovell.githubrepoviewer.di
 
-import com.lovell.network.UserService
+import com.lovell.githubrepoviewer.data.network.UserService
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

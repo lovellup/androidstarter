@@ -1,6 +1,6 @@
-package com.lovell.data
+package com.lovell.githubrepoviewer.data
 
-import com.lovell.network.UserService
+import com.lovell.githubrepoviewer.data.network.UserService
 import javax.inject.Inject
 
 class Repository @Inject constructor(
